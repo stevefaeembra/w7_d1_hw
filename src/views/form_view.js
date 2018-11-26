@@ -11,7 +11,6 @@ FormView.prototype.bindEvents = function () {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    debugger;
     const inputtedNumber = parseInt(event.target.number.value);
     // send a custom event
     PubSub.publish('FormView:number-submitted', inputtedNumber);
